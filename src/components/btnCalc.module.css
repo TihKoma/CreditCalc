@@ -1,0 +1,33 @@
+#calcWidgetBtn {
+    /* width: 110px; */
+	/* height: 110px; */
+	width: 63px;
+	height: 63px;
+    /* border: 1px solid black; */
+    position: fixed;
+    right: 0px;
+    bottom: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: white;
+    border-radius: 60px;
+    -moz-box-shadow: 0 0 12px -3px #555;
+    -webkit-box-shadow: 0 0 12px -3px #555;
+    box-shadow: 0 0 12px -3px #555;
+    cursor: pointer;
+}
+
+#calcWidgetBtn:hover {
+    -moz-box-shadow: 0 0 10px -3px #555;
+    -webkit-box-shadow: 0 0 10px -3px #555;
+    box-shadow: 0 0 10px -3px #555
+}
+
+#calcWidgetImage {
+    width: 53px;
+    height: 24px;
+    background-image: url('./../img/calc-widget-sm.png');
+    background-repeat: no-repeat;
+}

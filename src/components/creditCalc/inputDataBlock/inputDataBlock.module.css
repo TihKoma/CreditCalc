@@ -1,0 +1,291 @@
+#inputDataBlock,
+#outputDataBlock {
+  min-height: 100%;
+  width: 50%;
+  float: left;
+}
+
+.calcContentTitle {
+  font-size: 30px;
+  color: #333333;
+}
+
+.calcFormField {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none !important;
+  outline: none;
+  padding: 0 15px;
+  color: #828282;
+  font-size: 18px;
+  border-radius: 3px;
+  position: absolute;
+  z-index: 10;
+  color: #333;
+
+  transition: 0.3s;
+}
+
+.calcFormGroup {
+  position: relative;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  width: 470px;
+  height: 50px;
+  background-color: #f2f2f2;
+}
+
+.calcFormLabel {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  z-index: 0;
+  color: #9e9e9e;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.calcFormField:focus ~ .calcFormLabel,
+.calcFormField:not(:placeholder-shown) ~ .calcFormLabel {
+  top: 3px;
+  font-size: 12px;
+}
+
+.calcFormField:focus,
+.calcFormField:not(:placeholder-shown) {
+  padding-top: 6px;
+}
+
+.calcFormSubTitle {
+  position: absolute;
+  top: 55px;
+  margin: 0 15px;
+  color: #828282;
+  font-size: 13px;
+}
+
+.vehicleType {
+  margin: 10px 0;
+  width: 140px;
+  display: inline-block;
+}
+.vehicleType input[type="radio"] {
+  display: none;
+}
+.vehicleType label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 0;
+  line-height: 18px;
+  user-select: none;
+}
+.vehicleType label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 16.5px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background: url("./../../../img/radio-btn.png") 0 0 no-repeat;
+}
+
+/* Checked */
+.vehicleType input[type="radio"]:checked + label:before {
+  background: url("./../../../img/radio-btn-selected.png") 0 0 no-repeat;
+}
+
+/* Hover */
+.vehicleType label:hover:before {
+  /* filter: brightness(120%); */
+}
+
+/* Disabled */
+.vehicleType input[type="radio"]:disabled + label:before {
+  filter: grayscale(100%);
+}
+
+#vehicleTypeContainer {
+  margin-top: 25px;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#creditTermContainer {
+  margin-top: 20px;
+  color: #828282;
+  font-size: 16px;
+}
+
+#creditTermContainer b {
+  color: #333;
+  font-weight: 400;
+}
+
+#creditTermSlider {
+  width: 100%;
+  height: 20px;
+  margin-top: 16px;
+  padding-left: 6px;
+}
+
+.creditTermSliderPoint,
+.creditTermSliderPointSelected {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  /* left: 0; */
+  float: left;
+  bottom: 1px;
+  background: url("./../../../img/sliderPointSelected.png") 0 0 no-repeat;
+  margin-left: 25px;
+  margin-right: 25px;
+  cursor: pointer;
+  padding-top: 25px;
+  text-align: center;
+  color: #333;
+}
+
+.creditTermSliderPoint {
+  background: url("./../../../img/sliderPoint.png") 0 0 no-repeat;
+}
+
+.creditTermSliderPoint::before,
+.creditTermSliderPoint::after,
+.creditTermSliderPointSelected::before,
+.creditTermSliderPointSelected::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  width: 30px;
+  height: 5px;
+}
+
+.creditTermSliderPointSelected::before,
+.creditTermSliderPointSelected::after {
+  border-bottom: 3px solid #fe5000;
+}
+
+.creditTermSliderPoint::before,
+.creditTermSliderPoint::after,
+.sliderLastSelectedPoint::after {
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.creditTermSliderPoint::before,
+.creditTermSliderPointSelected::before {
+  left: -30px;
+}
+
+.creditTermSliderPoint::after,
+.creditTermSliderPointSelected::after {
+  left: 20px;
+}
+
+.sliderLastPoint::after {
+  border: none !important;
+}
+
+.optionalFieldsContainer {
+  color: #585858;
+  margin-top: 46px;
+}
+
+.optionalFieldsContainerBox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.optionalFieldsContainer span {
+  font-size: 15px;
+  color: #828282;
+}
+
+.checkbox {
+  display: block;
+  margin: 12px 60px 10px 10px;
+  line-height: 22px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.checkbox label {
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  vertical-align: top;
+  outline: none;
+  transition: background 0.3s ease;
+  background: url("./../../../img/checkbox.png") 0 0 no-repeat;
+  cursor: pointer;
+}
+
+/* Checked */
+.checkbox input[type="checkbox"]:checked {
+  background-image: url("./../../../img/checkbox-selected.png");
+}
+
+/* Focus */
+.focused input[type="checkbox"] {
+  /* box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); */
+}
+
+/* Hover */
+.checkbox input[type="checkbox"]:hover {
+  /* filter: brightness(110%); */
+}
+
+/* Active */
+.checkbox input[type="checkbox"]:active {
+  /* filter: brightness(80%); */
+}
+
+/* Disabled */
+.checkbox input[type="checkbox"]:disabled {
+  color: #666;
+  cursor: default;
+}
+.checkbox input[type="checkbox"]:disabled {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+#calculateBtn {
+  width: 100%;
+  height: 46px;
+  border-radius: 5px;
+  background-color: #fe5000;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.calcFormError {
+  position: absolute;
+  top: 53px;
+  margin: 0 15px;
+  color: #ff3131;
+  font-size: 13px;
+}
+
+.textError {
+  color: #ff3131;
+}
